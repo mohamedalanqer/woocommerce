@@ -90,32 +90,32 @@ class WooCoupon {
       this.lLinks});
 
   WooCoupon.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    code = json['code'];
-    amount = json['amount'];
-    dateCreated = json['date_created'];
-    dateModified = json['date_modified'];
+    id = json['id'] != null ? json['id']: -1;
+    code = json['code'] != null ? json['code']: "";
+    amount = json['amount'] != null ? json['amount']: "";
+    dateCreated = json['date_created'] != null ? json['date_created']: "";
+    dateModified = json['date_modified'] != null ? json['date_modified']: "";
     dateModifiedGmt = json['date_modified_gmt']  != null ? json['date_modified_gmt']: "";
-    discountType = json['discount_type'];
-    description = json['description'];
-    dateExpires = json['date_expires'];
+    discountType = json['discount_type'] != null ? json['discount_type']: "";
+    description = json['description'] != null ? json['description']: "";
+    dateExpires = json['date_expires'] != null ? json['date_expires']: "";
     dateExpiresGmt = json['date_expires_gmt']  != null ? json['date_expires_gmt']: "";
-    usageCount = json['usage_count'];
-    individualUse = json['individual_use'];
-    productIds = json['product_ids'].cast<int>();
-    excludedProductIds = json['excluded_product_ids'].cast<int>();
-    usageLimit = json['usage_limit'];
-    usageLimitPerUser = json['usage_limit_per_user'];
-    limitUsageToXItems = json['limit_usage_to_x_items'];
-    freeShipping = json['free_shipping'];
-    productCategories = json['product_categories'].cast<int>();
-    excludedProductCategories = json['excluded_product_categories'].cast<int>();
-    excludeSaleItems = json['exclude_sale_items'];
-    minimumAmount = json['minimum_amount'];
-    maximumAmount = json['maximum_amount'];
-    emailRestrictions = json['email_restrictions'].cast<String>();
-    usedBy = json['used_by'].cast<String>();
-    metaData = json['meta_data'].cast<String>();
+    usageCount = json['usage_count'] != null ? json['usage_count']: -1;
+    individualUse = json['individual_use'] != null ? json['individual_use']: "";
+    productIds = json['product_ids'] != null ? json['product_ids'].cast<int>(): [];
+    excludedProductIds = json['excluded_product_ids'] != null ?  json['excluded_product_ids'].cast<int>(): [];
+    usageLimit = json['usage_limit'] != null ? json['usage_limit']: -1;
+    usageLimitPerUser = json['usage_limit_per_user'] != null ? json['usage_limit_per_user']: -1;
+    limitUsageToXItems = json['limit_usage_to_x_items']!= null ? json['limit_usage_to_x_items']: -1;
+    freeShipping = json['free_shipping'] != null ? json['free_shipping']: false;
+    productCategories = json['product_categories'] != null ? json['product_categories'].cast<int>() : [];
+    excludedProductCategories = json['excluded_product_categories'] != null ? json['excluded_product_categories'].cast<int>(): [];
+    excludeSaleItems = json['exclude_sale_items']!= null ? json['exclude_sale_items']: false;
+    minimumAmount = json['minimum_amount']!= null ? json['minimum_amount']: "";
+    maximumAmount = json['maximum_amount']!= null ? json['maximum_amount']: "";
+    emailRestrictions = json['email_restrictions'].cast<String>() != null ?  json['email_restrictions'].cast<String>(): [];
+    usedBy = json['used_by'] != null ?  json['used_by'].cast<String>(): [];
+    metaData = json['meta_data']  != null ? json['meta_data'].cast<String>(): [];
     lLinks = json['_links'] != null
         ? new WooCouponLinks.fromJson(json['_links'])
         : null;
