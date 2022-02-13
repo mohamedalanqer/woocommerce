@@ -95,11 +95,11 @@ class WooCoupon {
     amount = json['amount'];
     dateCreated = json['date_created'];
     dateModified = json['date_modified'];
-    dateModifiedGmt = json['date_modified_gmt'];
+    dateModifiedGmt = json['date_modified_gmt']  != null ? json['date_modified_gmt']: "";
     discountType = json['discount_type'];
     description = json['description'];
     dateExpires = json['date_expires'];
-    dateExpiresGmt = json['date_expires_gmt'];
+    dateExpiresGmt = json['date_expires_gmt']  != null ? json['date_expires_gmt']: "";
     usageCount = json['usage_count'];
     individualUse = json['individual_use'];
     productIds = json['product_ids'].cast<int>();
