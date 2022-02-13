@@ -36,9 +36,9 @@ class WooCoupon {
   String? code;
   String? amount;
   String? dateCreated;
-  DateTime? dateCreatedGmt;
-  DateTime? dateModified;
-  DateTime? dateModifiedGmt;
+  String? dateCreatedGmt;
+  String? dateModified;
+  String? dateModifiedGmt;
   String? discountType;
   String? description;
   String? dateExpires;
