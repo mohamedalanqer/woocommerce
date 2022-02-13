@@ -35,7 +35,7 @@ class WooCoupon {
   int? id;
   String? code;
   String? amount;
-  DateTime? dateCreated;
+  String? dateCreated;
   DateTime? dateCreatedGmt;
   DateTime? dateModified;
   DateTime? dateModifiedGmt;
