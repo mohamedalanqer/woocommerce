@@ -36,7 +36,6 @@ class WooCoupon {
   String? code;
   String? amount;
   String? dateCreated;
-  String? dateCreatedGmt;
   String? dateModified;
   String? dateModifiedGmt;
   String? discountType;
@@ -65,8 +64,7 @@ class WooCoupon {
       {this.id,
       this.code,
       this.amount,
-      this.dateCreated,
-      this.dateCreatedGmt,
+      this.dateCreated, 
       this.dateModified,
       this.dateModifiedGmt,
       this.discountType,
@@ -96,7 +94,6 @@ class WooCoupon {
     code = json['code'];
     amount = json['amount'];
     dateCreated = json['date_created'];
-    dateCreatedGmt = json['date_created_gmt'];
     dateModified = json['date_modified'];
     dateModifiedGmt = json['date_modified_gmt'];
     discountType = json['discount_type'];
@@ -129,8 +126,7 @@ class WooCoupon {
     data['id'] = this.id;
     data['code'] = this.code;
     data['amount'] = this.amount;
-    data['date_created'] = this.dateCreated;
-    data['date_created_gmt'] = this.dateCreatedGmt;
+    data['date_created'] = this.dateCreated; 
     data['date_modified'] = this.dateModified;
     data['date_modified_gmt'] = this.dateModifiedGmt;
     data['discount_type'] = this.discountType;
